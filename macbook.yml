@@ -1,0 +1,14 @@
+---    
+- name: Log in as deploy user and setup ruby, passenger and nginx
+  hosts: localhost
+  connection: local 
+  vars_files:
+    - config
+  vars:
+    ansible_python_interpreter: /usr/local/bin/python3
+  user: "{{ macbook_user }}"
+  become: true
+  become_user: "{{ macbook_user }}"
+  roles: 
+    - role: macbook
+      tags: macbook

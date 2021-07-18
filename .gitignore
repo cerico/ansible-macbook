@@ -1,0 +1,6 @@
+secrets
+.deploy/secrets
+config
+location
+.vscode
+ansible.log
