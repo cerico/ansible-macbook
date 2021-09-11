@@ -2,7 +2,11 @@
   git:
     repo=https://github.com/robbyrussell/oh-my-zsh
     dest=~{{ macbook_user }}/.oh-my-zsh
-  
+
+- name: Set a hostname
+  ansible.builtin.hostname:
+    name: kelso
+
 - name: Copy zshenv
   copy:
     src: zshenv
@@ -76,7 +80,7 @@
   command: git config --global user.email {{ email }}
 
 - name: 'install bundler v2'
-  command: "~{{ macbook_user }}/.rbenv/shims/gem install bundler -v 2.1.4"
+  command: "~{{ macbook_user }}/.rbenv/shims/gem install bundler -v 2.2.23"
 
 - name: 'install rails'
   command: "~{{ macbook_user }}/.rbenv/shims/gem install rails"
@@ -115,9 +119,8 @@
   git: repo=git://github.com/cerico/sergey.git dest=~{{ macbook_user }}/ansible/sergey
 
 - name: Clone rails
-  git: repo=git://github.com/cerico/rails.git dest=~{{ macbook_user }}/ansible/rails
+  git: repo=git://github.com/cerico/railway.git dest=~{{ macbook_user }}/ansible/railway
 
 - name: Clone contabo
   git: repo=git://github.com/cerico/contabo.git dest=~{{ macbook_user }}/ansible/contabo
-
 

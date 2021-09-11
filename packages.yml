@@ -1,0 +1,26 @@
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+homebrew_installed_packages:
+  - wget
+  - tree
+  - redis
+  - shared-mime-info
+  - yarn
+  - jq
+  - youtube-dl
+  - chromedriver
+homebrew_cask_apps:
+  - vlc
+  - firefox
+  - alfred
+  - iterm2
+  - google-chrome
+  - slack
+  - visual-studio-code
+  - vagrant
+  - vagrant-manager
+  - virtualbox
+  - virtualbox-extension-pack
+  - tunnelblick
+  - ableton-live-suite
